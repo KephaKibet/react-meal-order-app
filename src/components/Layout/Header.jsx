@@ -1,6 +1,7 @@
 import { Fragment } from "react"
+import HeaderCartButton from "./HeaderCartButton"
 
-import headerImg from '../components/assets/headerImg.jpg'
+import headerImg from '../../assets/headerImg.jpg'
 import classes from './Header.module.css'
 
 
@@ -10,7 +11,7 @@ const Header = props => {
   return <Fragment>
     <header className={classes.header}>
       <h1>Tunakula?</h1>
-      <button>Cart</button>
+       <HeaderCartButton />
       
     </header>
 
@@ -21,4 +22,4 @@ const Header = props => {
   </Fragment>
 }
 
-export default Header
+export default Header;
