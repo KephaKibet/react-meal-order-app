@@ -6,7 +6,7 @@ import CartContext from '../../../store/cart-context';
 const MealItem = props => {
   const cartCtx = useContext(CartContext)
   //2dp
-  const price = `$${props.price.toFixed(2)}`;
+  const price = `KES ${props.price.toFixed(2)}`;
   const addToCartHandler = amount => {
     cartCtx.addItem({
       id: props.id,
