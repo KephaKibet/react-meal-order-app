@@ -1,7 +1,9 @@
 import classes from './CartItem.module.css';
 
 const CartItem = (props) => {
-  const price = `$${props.price.toFixed(2)}`;
+
+  // .toFixed(2) giving typeError
+  const price = `KES ${props.price.toFixed(2)}`;
 
   return (
     <li className={classes['cart-item']}>
