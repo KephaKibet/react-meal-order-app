@@ -13,7 +13,7 @@ const cartReducer = (state, action) => {
     const existingCartItemIndex = state.items.findIndex(item => item.id = action.item.id)
     const existingCartItem = state.items[existingCartItemIndex];
     let updatedItems;
-    let updatedItem;
+    // let updatedItem;
 
     if (existingCartItem) {
       const updatedItem = {
@@ -25,8 +25,9 @@ const cartReducer = (state, action) => {
     }
 
     else {
+      //item added for the first time
           // return a new aray !modify existing items
-      updatedItems = state.items.concat(updatedItem);
+      updatedItems = state.items.concat(action.item);
     }
 
     const updatedTotalAmount = state.totalAmount + action.item.price * action.item.amount;
